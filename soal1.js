@@ -15,7 +15,7 @@ const getPalindrome = (word) => {
     }
 };
 
-getPalindrome("malam");
+getPalindrome("Kasurusak");
 console.log("");
 
 //B

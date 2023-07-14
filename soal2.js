@@ -8,7 +8,9 @@ const PijarFood = (price, voucher, distance, tax) => {
 
     if (typeof price !== "number" || isNaN(price)) {
         return console.log(`Please enter the correct ${chalk.red("Price")}`);
-    } else if (voucher !== "PIJARFOOD5" && voucher !== "DITRAKTIRPIJAR") {
+    } else if (typeof voucher !== "string" && voucher !== undefined) {
+        return console.log(`Please enter a valid ${chalk.red("Voucher")}`);
+    } else if (voucher !== "PIJARFOOD5" && voucher !== "DITRAKTIRPIJAR" && voucher !== undefined) {
         return console.log(`${chalk.red("Voucher")} not found`);
     } else if (typeof distance !== "number" || isNaN(distance)) {
         return console.log(`Please enter the correct ${chalk.red("Distance")}`);
@@ -54,7 +56,7 @@ const PijarFood = (price, voucher, distance, tax) => {
 
 const price = 100000;
 const voucher = "PIJARFOOD5";
-const distance = 10;
-const tax = false;
+const distance = 2;
+const tax = true;
 
 PijarFood(price, voucher, distance, tax);
