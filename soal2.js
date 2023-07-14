@@ -55,7 +55,7 @@ const PijarFood = (price, voucher, distance, tax) => {
 };
 
 const price = 100000;
-const voucher = undefined;
+const voucher = "PIJARFOOD5";
 const distance = 10;
 const tax = true;
 
